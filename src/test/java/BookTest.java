@@ -22,4 +22,9 @@ public class BookTest {
         assertEquals("J.R.R. Tolkien", book.hasAuthor());
     }
 
+    @Test
+    public void shouldHaveGenre(){
+        assertEquals("Fantasy", book.hasGenre());
+    }
+
 }

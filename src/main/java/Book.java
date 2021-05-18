@@ -17,4 +17,8 @@ public class Book {
     public String hasAuthor() {
         return this.author;
     }
+
+    public String hasGenre() {
+        return this.genre;
+    }
 }
