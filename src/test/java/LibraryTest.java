@@ -11,14 +11,14 @@ public class LibraryTest {
 
     @Before
     public void before(){
-        library = new Library(100);
+        library = new Library(2);
         book_1 = new Book("Lord of the Rings", "J.R.R. Tolkien", "Fantasy");
         book_2 = new Book("Harry Potter", " J.K. Rowling", "Fantasy");
     }
 
     @Test
     public void shouldHaveCapacity(){
-        assertEquals(100, library.getCapacity());
+        assertEquals(2, library.getCapacity());
     }
 
     @Test
@@ -36,8 +36,10 @@ public class LibraryTest {
     @Test
     public void canCheckIfCapacityIsFull(){
         library.addBookToLibrary(book_1);
-        library.addBookToLibrary(book_2);
+//        library.addBookToLibrary(book_2);
         assertEquals(false, library.checkIfCapacityIsFull());
     }
+
+
 
 }
