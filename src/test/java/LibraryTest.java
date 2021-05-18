@@ -6,12 +6,14 @@ import static org.junit.Assert.assertEquals;
 public class LibraryTest {
 
     private Library library;
-    private Book book;
+    private Book book_1;
+    private Book book_2;
 
     @Before
     public void before(){
         library = new Library(100);
-        book = new Book("Lord of the Rings", "J.R.R. Tolkien", "Fantasy");
+        book_1 = new Book("Lord of the Rings", "J.R.R. Tolkien", "Fantasy");
+        book_2 = new Book("Harry Potter", " J.K. Rowling", "Fantasy");
     }
 
     @Test
@@ -26,8 +28,16 @@ public class LibraryTest {
 
     @Test
     public void canAddBookToLibrary(){
-        library.addBookToLibrary(book);
-        assertEquals(1, library.countBooks());
+        library.addBookToLibrary(book_1);
+        library.addBookToLibrary(book_2);
+        assertEquals(2, library.countBooks());
+    }
+
+    @Test
+    public void canCheckIfCapacityIsFull(){
+        library.addBookToLibrary(book_1);
+        library.addBookToLibrary(book_2);
+        assertEquals(false, library.checkIfCapacityIsFull());
     }
 
 }

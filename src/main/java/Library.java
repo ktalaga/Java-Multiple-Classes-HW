@@ -21,4 +21,10 @@ public class Library {
     public void addBookToLibrary(Book book) {
         this.bookCollection.add(book);
     }
+
+    public boolean checkIfCapacityIsFull() {
+        if(this.countBooks() < this.capacity){
+            return false;
+        } return true;
+    }
 }
