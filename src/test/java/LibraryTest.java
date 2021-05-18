@@ -1,4 +1,7 @@
 import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class LibraryTest {
 
@@ -7,6 +10,11 @@ public class LibraryTest {
     @Before
     public void before(){
         library = new Library(100);
+    }
+
+    @Test
+    public void shouldHaveCapacity(){
+        assertEquals(100, library.getCapacity());
     }
 
 }

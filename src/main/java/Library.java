@@ -10,4 +10,7 @@ public class Library {
         this.bookCollection = new ArrayList<Book>();
     }
 
+    public int getCapacity() {
+        return this.capacity;
+    }
 }
