@@ -17,4 +17,9 @@ public class BookTest {
         assertEquals("Lord of the Rings", book.hasName());
     }
 
+    @Test
+    public void shouldHaveAuthor(){
+        assertEquals("J.R.R. Tolkien", book.hasAuthor());
+    }
+
 }
