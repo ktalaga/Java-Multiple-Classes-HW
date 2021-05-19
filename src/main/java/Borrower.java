@@ -12,4 +12,9 @@ public class Borrower {
         return booksBorrowed.size();
     }
 
+    public void borrowBookFromLibrary(Library library){
+        Book book = library.removeBookFromLibrary();
+        this.booksBorrowed.add(book);
+    }
+
 }

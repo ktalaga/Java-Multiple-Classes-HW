@@ -30,4 +30,9 @@ public class Library {
             return false;
         } return true;
     }
+
+    public Book removeBookFromLibrary(){
+        return this.bookCollection.remove(0);
+    }
+
 }
